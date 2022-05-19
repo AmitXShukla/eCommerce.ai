@@ -17,6 +17,12 @@ This section, assume, **implanted IOT sensors** or available **API** to capture 
 *not all IOT data mentioned below is used in our analysis.*
 
 ---
+## events
+
+---
+## holiday calendar
+
+---
 ## temperature
 
 Outside temperature
@@ -62,7 +68,74 @@ weatherDF = DataFrame(
     )
 first(weatherDF[:, [:cityId, :state, :indoorTemp]], 10)
 ```
+---
+## moisture
+![Sensors](assets/images/sensor3.png)
 
+```@example
+##############################################
+# moisture
+##############################################
+using DataFrames, CSV, Dates, Distributions
+sampleSize = 365
+weatherDF = DataFrame(
+    cityId = 1:1:sampleSize, 
+    state = rand(["LA","LA","FL"], sampleSize),
+    indoorTemp = rand(64:1:94, sampleSize),
+    outdoorTemp = rand(54:1:104, sampleSize),
+    wind = rand(5:1:30, sampleSize),
+    humidity = rand(30:1:70, sampleSize),
+    precipitation = rand(0:1:5, sampleSize)
+    )
+first(weatherDF[:,[:cityId, :state, :humidity]], 10)
+```
+---
+## sound
+
+![Sensors](assets/images/sensor5.png)
+```@example
+##############################################
+# Noise / sound
+##############################################
+using DataFrames, CSV, Dates, Distributions
+sampleSize = 365
+weatherDF = DataFrame(
+    cityId = 1:1:sampleSize, 
+    state = rand(["LA","LA","FL"], sampleSize),
+    indoorTemp = rand(64:1:94, sampleSize),
+    sound = rand(54:1:104, sampleSize),
+    wind = rand(5:1:30, sampleSize),
+    humidity = rand(30:1:70, sampleSize),
+    precipitation = rand(0:1:5, sampleSize)
+    )
+first(weatherDF[:,[:cityId, :state, :sound]], 10)
+```
+
+---
+## activities
+motion activities
+
+![Sensors](assets/images/sensor6.png)
+
+```@example
+##############################################
+# motion activities
+##############################################
+using DataFrames, CSV, Dates, Distributions
+sampleSize = 365
+weatherDF = DataFrame(
+    cityId = 1:1:sampleSize, 
+    state = rand(["LA","LA","FL"], sampleSize),
+    indoorTemp = rand(64:1:94, sampleSize),
+    sound = rand(54:1:104, sampleSize),
+    shadows = rand(5:1:30, sampleSize),
+    humidity = rand(30:1:70, sampleSize),
+    precipitation = rand(0:1:5, sampleSize)
+    )
+first(weatherDF[:,[:cityId, :state, :shadows]], 10)
+```
+
+---
 ## density / vision
 Capturing crowd density varies case by case. For example, In case of, organized gatherings like Theme parks, concerts etc.
 number of people attending the event can be predicted in advance.
@@ -85,72 +158,5 @@ Brightness
 
 ![Sensors](assets/images/sensor4.png)
 
-
----
-## moisture
-![Sensors](assets/images/sensor3.png)
-
-```@example
-##############################################
-# moisture
-##############################################
-using DataFrames, CSV, Dates, Distributions
-sampleSize = 365
-weatherDF = DataFrame(
-    cityid = 1:1:sampleSize, 
-    state = rand(["LA","LA","FL"], sampleSize),
-    indoorTemp = rand(64:1:94, sampleSize),
-    outdoorTemp = rand(54:1:104, sampleSize),
-    wind = rand(5:1:30, sampleSize),
-    humidity = rand(30:1:70, sampleSize),
-    precipitation = rand(0:1:5, sampleSize)
-    )
-first(weatherDF[:,[:cityid, :state, :humidity]], 10)
-```
----
-## sound
-
-![Sensors](assets/images/sensor5.png)
-```@example
-##############################################
-# Noise / sound
-##############################################
-using DataFrames, CSV, Dates, Distributions
-sampleSize = 365
-weatherDF = DataFrame(
-    cityid = 1:1:sampleSize, 
-    state = rand(["LA","LA","FL"], sampleSize),
-    indoorTemp = rand(64:1:94, sampleSize),
-    sound = rand(54:1:104, sampleSize),
-    wind = rand(5:1:30, sampleSize),
-    humidity = rand(30:1:70, sampleSize),
-    precipitation = rand(0:1:5, sampleSize)
-    )
-first(weatherDF[:,[:cityid, :state, :sound]], 10)
-```
-
----
-## activities
-motion activities
-
-![Sensors](assets/images/sensor6.png)
-
-```@example
-##############################################
-# motion activities
-##############################################
-using DataFrames, CSV, Dates, Distributions
-sampleSize = 365
-weatherDF = DataFrame(
-    cityid = 1:1:sampleSize, 
-    state = rand(["LA","LA","FL"], sampleSize),
-    indoorTemp = rand(64:1:94, sampleSize),
-    sound = rand(54:1:104, sampleSize),
-    shadows = rand(5:1:30, sampleSize),
-    humidity = rand(30:1:70, sampleSize),
-    precipitation = rand(0:1:5, sampleSize)
-    )
-first(weatherDF[:,[:cityid, :state, :shadows]], 10)
-```
 ---
 ## news
