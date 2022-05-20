@@ -19,8 +19,20 @@ This section, assume, **implanted IOT sensors** or available **API** to capture 
 ---
 ## events
 
+```@example
+using CSV, DataFrames
+eventDF = DataFrame(CSV.File("../../assets/sampleData/eventCalendar.csv"))
+first(eventDF[:, :], 10)
+```
+
 ---
 ## holiday calendar
+
+```@example
+using CSV, DataFrames
+calendarDF = DataFrame(CSV.File("../../assets/sampleData/calendar.csv"))
+first(calendarDF[:, :], 10)
+```
 
 ---
 ## temperature
@@ -36,6 +48,7 @@ Outside temperature
 using DataFrames, CSV, Dates, Distributions
 sampleSize = 365
 weatherDF = DataFrame(
+    recordDate = Date("2022-01-01", dateformat"y-m-d"):Day(1):(Date("2022-01-01", dateformat"y-m-d")+ Day(sampleSize-1)),
     cityId = 1:1:sampleSize, 
     state = rand(["LA","LA","FL"], sampleSize),
     indoorTemp = rand(64:1:94, sampleSize),
@@ -44,7 +57,7 @@ weatherDF = DataFrame(
     humidity = rand(30:1:70, sampleSize),
     precipitation = rand(0:1:5, sampleSize)
     )
-first(weatherDF[:, [:cityId, :state, :outdoorTemp]], 10)
+first(weatherDF[:, [:recordDate, :cityId, :state, :outdoorTemp]], 10)
 ```
 
 Inside temperature
@@ -58,6 +71,7 @@ Inside temperature
 using DataFrames, CSV, Dates, Distributions
 sampleSize = 365
 weatherDF = DataFrame(
+    recordDate = Date("2022-01-01", dateformat"y-m-d"):Day(1):(Date("2022-01-01", dateformat"y-m-d")+ Day(sampleSize-1)),
     cityId = 1:1:sampleSize, 
     state = rand(["LA","LA","FL"], sampleSize),
     indoorTemp = rand(64:1:94, sampleSize),
@@ -66,7 +80,7 @@ weatherDF = DataFrame(
     humidity = rand(30:1:70, sampleSize),
     precipitation = rand(0:1:5, sampleSize)
     )
-first(weatherDF[:, [:cityId, :state, :indoorTemp]], 10)
+first(weatherDF[:, [:recordDate, :cityId, :state, :outdoorTemp]], 10)
 ```
 ---
 ## moisture
@@ -79,6 +93,7 @@ first(weatherDF[:, [:cityId, :state, :indoorTemp]], 10)
 using DataFrames, CSV, Dates, Distributions
 sampleSize = 365
 weatherDF = DataFrame(
+    recordDate = Date("2022-01-01", dateformat"y-m-d"):Day(1):(Date("2022-01-01", dateformat"y-m-d")+ Day(sampleSize-1)),
     cityId = 1:1:sampleSize, 
     state = rand(["LA","LA","FL"], sampleSize),
     indoorTemp = rand(64:1:94, sampleSize),
@@ -87,7 +102,7 @@ weatherDF = DataFrame(
     humidity = rand(30:1:70, sampleSize),
     precipitation = rand(0:1:5, sampleSize)
     )
-first(weatherDF[:,[:cityId, :state, :humidity]], 10)
+first(weatherDF[:,[:recordDate,:cityId, :state, :humidity]], 10)
 ```
 ---
 ## sound
@@ -100,6 +115,7 @@ first(weatherDF[:,[:cityId, :state, :humidity]], 10)
 using DataFrames, CSV, Dates, Distributions
 sampleSize = 365
 weatherDF = DataFrame(
+    recordDate = Date("2022-01-01", dateformat"y-m-d"):Day(1):(Date("2022-01-01", dateformat"y-m-d")+ Day(sampleSize-1)),
     cityId = 1:1:sampleSize, 
     state = rand(["LA","LA","FL"], sampleSize),
     indoorTemp = rand(64:1:94, sampleSize),
@@ -108,7 +124,7 @@ weatherDF = DataFrame(
     humidity = rand(30:1:70, sampleSize),
     precipitation = rand(0:1:5, sampleSize)
     )
-first(weatherDF[:,[:cityId, :state, :sound]], 10)
+first(weatherDF[:,[:recordDate,:cityId, :state, :sound]], 10)
 ```
 
 ---
@@ -124,6 +140,7 @@ motion activities
 using DataFrames, CSV, Dates, Distributions
 sampleSize = 365
 weatherDF = DataFrame(
+    recordDate = Date("2022-01-01", dateformat"y-m-d"):Day(1):(Date("2022-01-01", dateformat"y-m-d")+ Day(sampleSize-1)),
     cityId = 1:1:sampleSize, 
     state = rand(["LA","LA","FL"], sampleSize),
     indoorTemp = rand(64:1:94, sampleSize),
@@ -132,7 +149,7 @@ weatherDF = DataFrame(
     humidity = rand(30:1:70, sampleSize),
     precipitation = rand(0:1:5, sampleSize)
     )
-first(weatherDF[:,[:cityId, :state, :shadows]], 10)
+first(weatherDF[:,[:recordDate, :cityId, :state, :shadows]], 10)
 ```
 
 ---
