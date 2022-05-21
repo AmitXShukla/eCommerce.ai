@@ -38,9 +38,16 @@ eCommerce.ai takes a methodological business workflow approach (follow data) to 
     Real time Analytics:    running analytics on real time data
 
 # Architecture
+#### Proposed Architecture
+![Proposed Architecture](../../assets/diagrams/architecture.png)
 
 # Workflow
+#### Business process workflow
+![Proposed Workflow](../../assets/diagrams/workflow.png)
 
 # ERD
+#### Physical ERD DB Architecture
+![Proposed ERD](../../assets/diagrams/erd.png)
 
 # Explainable AI
+#### Explainable AI
