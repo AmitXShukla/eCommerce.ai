@@ -32,13 +32,13 @@ eCommerce.ai is a complete end-to-end Data Science, Graph, AI/ML Analytics techn
 # Platform
 !!! info "Platform"
 
-    **Platform:** Oracle, Graph DBs, Oracle OCI, Microsoft Azure data cloud.
+    **Frontend:** Julia 1.7.1
 
-    **Analytics:** Jupyter NBs, Julia Pluto notebooks, Power BI, Oracle Analytics Cloud 
+    **Backend:** Oracle OCI Cloud, Oracle ADW (Autonomous data warehouse) | TigerGraph/Oracle Graph DB
 
-    **Programming/Framework:** Python | Julia, FluxML | PyTorch
+    **Rest API:** Julia, TGCloud RESTAPI
 
-    **ERPs:** Oracle, SAP, PeopleSoft, SalesForce
+    **AI:** Julia, FLUXml.ai, Oracle AutoML
 
 # how to use this book
 This book first version is completely free(v1.2) and is published as website under **GitHub gh-pages branch.**

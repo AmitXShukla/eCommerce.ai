@@ -51,3 +51,4 @@ eCommerce.ai takes a methodological business workflow approach (follow data) to 
 
 # Explainable AI
 #### Explainable AI
+![Explainable AI](https://github.com/AmitXShukla/eCommerce.ai/blob/main/assets/diagrams/explain.png?raw=true)
