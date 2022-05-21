@@ -60,7 +60,7 @@ assets
                     Pluto -> reactive, auto run , real time data refresh
     sampleData: small sample datasets
                 please see, GitHub doesn't allow to upload big amounts of data.
-    sampleData jupyter notebook -> This Julia notebook can bs used to to generate volume of commerce data.
+    sampleData jupyter notebook -> This Julia notebook can be used to to generate volume of commerce data.
     docs/src :  complete source code with executed samples
     docs/make.jlL   This file is used to generate HTML Documentation of code.
                     similar to Python Sphinx | readthedocs | Jupyter eBook
