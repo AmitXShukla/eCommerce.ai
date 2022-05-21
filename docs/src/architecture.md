@@ -39,15 +39,15 @@ eCommerce.ai takes a methodological business workflow approach (follow data) to 
 
 # Architecture
 #### Proposed Architecture
-![Proposed Architecture](../../assets/diagrams/architecture.png)
+![Proposed Architecture](https://github.com/AmitXShukla/eCommerce.ai/blob/main/assets/diagrams/architecture.png?raw=true)
 
 # Workflow
 #### Business process workflow
-![Proposed Workflow](../../assets/diagrams/workflow.png)
+![Proposed Workflow](https://github.com/AmitXShukla/eCommerce.ai/blob/main/assets/diagrams/workflow.png?raw=true)
 
 # ERD
 #### Physical ERD DB Architecture
-![Proposed ERD](../../assets/diagrams/erd.png)
+![Proposed ERD](https://github.com/AmitXShukla/eCommerce.ai/blob/main/assets/diagrams/erd.png?raw=true)
 
 # Explainable AI
 #### Explainable AI
